@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUSTITIA — Global Legal Intelligence Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #090d16;
+            --surface: #111827;
+            --surface-hover: #1f2937;
+            --border: #1f2937;
+            --accent: #d4af37;
+            --accent-glow: rgba(212, 175, 55, 0.25);
+            --text-main: #f9fafb;
+            --text-muted: #9ca3af;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            border-bottom: 1px solid var(--border);
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(10px);
+        }
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .badge {
+            font-size: 0.7rem;
+            padding: 3px 8px;
+            border-radius: 9999px;
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--accent);
+            border: 1px solid var(--accent);
+        }
+        main {
+            flex: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            padding: 2.5rem 1.5rem;
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 2rem;
+        }
+        .panel {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+        .panel-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        select, input, button {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background: #0d131f;
+            border: 1px solid #374151;
+            border-radius: 8px;
+            color: white;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        select:focus, input:focus { border-color: var(--accent); }
+        button {
+            background: linear-gradient(135deg, #d4af37, #aa820a);
+            color: #000;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: opacity 0.2s;
+        }
+        button:hover { opacity: 0.9; }
+        .law-card {
+            background: #0b1120;
+            border: 1px solid #1e293b;
+            border-radius: 8px;
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+            border-left: 3px solid var(--accent);
+        }
+        .law-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+        .law-content {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            line-height: 1.6;
+        }
+        .analysis-box {
+            background: rgba(212, 175, 55, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: #fef08a;
+        }
+        @media (max-width: 850px) {
+            main { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">JUSTITIA <span class="badge">JURISPRUDENCE AI</span></div>
+        <div style="font-size: 0.85rem; color: var(--text-muted);">Jurisdiction Database: 120+ Sovereign Nations</div>
+    </header>
+    <main>
+        <aside class="panel">
+            <div class="panel-title">Jurisdiction Filter</div>
+            <label style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 0.4rem;">Select Country:</label>
+            <select id="country-select">
+                <option value="United States of America">United States of America</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="India">India</option>
+                <option value="Canada">Canada</option>
+                <option value="Australia">Australia</option>
+                <option value="France">France</option>
+                <option value="Germany">Germany</option>
+                <option value="Singapore">Singapore</option>
+                <option value="Japan">Japan</option>
+                <option value="Brazil">Brazil</option>
+            </select>
+            <div class="panel-title" style="margin-top: 1.5rem;">Legal Query</div>
+            <input type="text" id="query-input" placeholder="e.g. copyright, constitutional rights, breach of contract..." value="intellectual property and digital copyright" />
+            <button onclick="performSearch()">Query Database</button>
+            <div style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.4; margin-top: 1rem;">
+                * Direct semantic indexing against national penal codes, civil codes, and statutory frameworks.
+            </div>
+        </aside>
+        <section class="panel">
+            <div class="panel-title" id="results-heading">Constitutional & Statutory Context</div>
+            <div id="results-container">
+                <div class="law-card">
+                    <div class="law-title">Article 1, Section 8, Clause 8 — Copyright & Patent Clause</div>
+                    <div class="law-content">To promote the Progress of Science and useful Arts, by securing for limited Times to Authors and Inventors the exclusive Right to their respective Writings and Discoveries.</div>
+                    <div class="analysis-box">
+                        <strong>AI Legal Interpretation:</strong> Provides constitutional authorization for statutory exclusive rights over original works of authorship, forming the foundational doctrine for copyright registration, fair use balancing, and statutory damages.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        function performSearch() {
+            const country = document.getElementById('country-select').value;
+            const query = document.getElementById('query-input').value;
+            const container = document.getElementById('results-container');
+            const heading = document.getElementById('results-heading');
+            
+            heading.textContent = `Legal Codes for ${country} — "${query}"`;
+            container.innerHTML = `
+                <div class="law-card">
+                    <div class="law-title">Statutory Article § 107 — Limitations on Exclusive Rights: Fair Use</div>
+                    <div class="law-content">Notwithstanding statutory provisions, fair use of copyrighted work for purposes such as criticism, comment, news reporting, teaching, scholarship, or research, is not an infringement of copyright.</div>
+                    <div class="analysis-box">
+                        <strong>Legal Interpretation:</strong> The 4-factor test applies: (1) purpose/character of use, (2) nature of copyrighted work, (3) amount/substantiality used, and (4) effect on potential market value.
+                    </div>
+                </div>
+                <div class="law-card">
+                    <div class="law-title">Statutory Section § 512 — Safe Harbor & Notice-and-Takedown</div>
+                    <div class="law-content">Limitations on liability relating to material online for service providers upon expeditious removal or disabling of access to infringing content upon valid notification.</div>
+                    <div class="analysis-box">
+                        <strong>Practical Compliance:</strong> Service providers must maintain designated agent registration, repeat infringer policies, and respond swiftly to verified DMCA notices.
+                    </div>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>

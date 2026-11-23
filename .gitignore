@@ -1,0 +1,59 @@
+# Environment & Secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+*.class
+*.so
+.Python
+env/
+venv/
+.venv/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+
+# Large binaries & models
+*.pt
+*.pth
+*.bin
+*.exe
+*.dll
+*.iso
+*.tar.gz
+*.zip
+
+# Database & caches
+*.db
+*.sqlite
+*.sqlite3
+
+# Node.js & Vercel
+node_modules/
+.vercel/
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+.vercel

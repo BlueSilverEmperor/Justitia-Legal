@@ -1,0 +1,16 @@
+dist/
+build/
+*.exe
+*.pt
+*.pth
+*.bin
+*.dll
+*.iso
+*.tar.gz
+*.zip
+*.db
+*.sqlite
+__pycache__/
+.env*
+.venv/
+node_modules/

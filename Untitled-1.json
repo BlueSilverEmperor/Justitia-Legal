@@ -1,0 +1,193 @@
+{
+    "CTk": {
+        "fg_color": [
+            "#F1F1F1",
+            "#0D1B2A"
+        ]
+    },
+    "CTkFrame": {
+        "fg_color": [
+            "#FFFFFF",
+            "#1B263B"
+        ],
+        "top_fg_color": [
+            "#f5f5f5",
+            "#2a2a2a"
+        ],
+        "border_color": [
+            "#cccccc",
+            "#333333"
+        ],
+        "border_width": 0,
+        "corner_radius": 6
+    },
+    "CTkButton": {
+        "fg_color": [
+            "#1B263B",
+            "#C5A059"
+        ],
+        "hover_color": [
+            "#141d2e",
+            "#a6864a"
+        ],
+        "text_color": [
+            "#ffffff",
+            "#ffffff"
+        ],
+        "text_color_disabled": [
+            "#a1a1a1",
+            "#828282"
+        ],
+        "border_color": [
+            "#3E454A",
+            "#949A9F"
+        ],
+        "border_width": 0,
+        "corner_radius": 6
+    },
+    "CTkLabel": {
+        "text_color": [
+            "#0D1B2A",
+            "#E0E0E0"
+        ],
+        "fg_color": "transparent",
+        "corner_radius": 0,
+        "anchor": "center"
+    },
+    "CTkEntry": {
+        "fg_color": [
+            "#ffffff",
+            "#2a2a2a"
+        ],
+        "border_color": [
+            "#cccccc",
+            "#333333"
+        ],
+        "text_color": [
+            "#000000",
+            "#ffffff"
+        ],
+        "placeholder_text_color": [
+            "#808080",
+            "#808080"
+        ],
+        "border_width": 2,
+        "corner_radius": 6
+    },
+    "CTkTextbox": {
+        "fg_color": [
+            "#ffffff",
+            "#1e1e1e"
+        ],
+        "text_color": [
+            "#000000",
+            "#ffffff"
+        ],
+        "border_color": [
+            "#cccccc",
+            "#333333"
+        ],
+        "border_width": 0,
+        "corner_radius": 6,
+        "scrollbar_button_color": [
+            "#1B263B",
+            "#C5A059"
+        ],
+        "scrollbar_button_hover_color": [
+            "#141d2e",
+            "#a6864a"
+        ]
+    },
+    "CTkScrollableFrame": {
+        "fg_color": [
+            "#FFFFFF",
+            "#1B263B"
+        ],
+        "label_fg_color": [
+            "#f5f5f5",
+            "#2a2a2a"
+        ],
+        "border_color": [
+            "#cccccc",
+            "#333333"
+        ],
+        "border_width": 0,
+        "corner_radius": 6,
+        "scrollbar_fg_color": null,
+        "scrollbar_button_color": [
+            "#1B263B",
+            "#C5A059"
+        ],
+        "scrollbar_button_hover_color": [
+            "#141d2e",
+            "#a6864a"
+        ]
+    },
+    "CTkOptionMenu": {
+        "fg_color": [
+            "#1B263B",
+            "#C5A059"
+        ],
+        "button_color": [
+            "#141d2e",
+            "#a6864a"
+        ],
+        "button_hover_color": [
+            "#27577d",
+            "#102c4b"
+        ],
+        "text_color": [
+            "#ffffff",
+            "#ffffff"
+        ],
+        "text_color_disabled": [
+            "#a1a1a1",
+            "#828282"
+        ],
+        "corner_radius": 6,
+        "dynamic_resizing": true
+    },
+    "CTkScrollbar": {
+        "fg_color": null,
+        "button_color": [
+            "#1B263B",
+            "#C5A059"
+        ],
+        "button_hover_color": [
+            "#141d2e",
+            "#a6864a"
+        ],
+        "border_color": [
+            "#3E454A",
+            "#949A9F"
+        ],
+        "border_width": 0,
+        "border_spacing": 4,
+        "corner_radius": 100
+    },
+    "DropdownMenu": {
+        "fg_color": [
+            "#ffffff",
+            "#343638"
+        ],
+        "hover_color": [
+            "#EBEBEB",
+            "#3B3B3B"
+        ],
+        "text_color": [
+            "#000000",
+            "#ffffff"
+        ],
+        "border_color": [
+            "#cccccc",
+            "#333333"
+        ],
+        "border_width": 1,
+        "corner_radius": 6
+    },
+    "CTkFont": {
+        "family": "Roboto",
+        "size": 13,
+        "weight": "normal"
+    }
+}
